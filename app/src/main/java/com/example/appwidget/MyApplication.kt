@@ -1,6 +1,7 @@
 package com.example.appwidget
 
 import android.app.Application
+import android.util.Log
 import androidx.core.content.edit
 
 class MyApplication : Application() {
@@ -12,5 +13,6 @@ class MyApplication : Application() {
             sharedPreferences.edit { putInt(Constant.APP_COUNT, 0) }
             sharedPreferences.edit { putLong(Constant.TIME, System.currentTimeMillis()) }
         }
+        Log.d("MyApplication", "onCreate: ${sharedPreferences.getInt(Constant.APP_COUNT, 0)}")
     }
 }
