@@ -49,6 +49,7 @@ class MainActivity : AppCompatActivity() {
         }
             sendBroadcast(intent)
         }
+        Log.d("ahuhu", "do ngoc")
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
