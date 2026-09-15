@@ -55,9 +55,6 @@ class MainActivity : AppCompatActivity() {
             insets
         }
     }
-    fun changeTaoName(users: MutableList<User>) {
-        users.add(User("huhu"))
-    }
 }
 
-data class User(var name: String)
+data class User(var nameHoh: String)
