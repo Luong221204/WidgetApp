@@ -13,6 +13,6 @@ class MyApplication : Application() {
             sharedPreferences.edit { putInt(Constant.APP_COUNT, 0) }
             sharedPreferences.edit { putLong(Constant.TIME, System.currentTimeMillis()) }
         }
-        Log.d("MyApplication", "onCreate: ${sharedPreferences.getInt(Constant.APP_COUNT, 0)}")
+        Log.d("MyApplication", "onCreate: hyangly")
     }
 }
