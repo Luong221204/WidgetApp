@@ -43,16 +43,9 @@ class MainActivity : AppCompatActivity() {
         }
         findViewById<Button>(R.id.btnConfirm).setOnClickListener {
             val intent = Intent(this, MyAppWidget::class.java).apply {
-            action = Constant.TEXT_NEED_TO_CHANGE
+            action = Constant.PREF_NAME
             `package` = packageName
         }
-            data class User(var name: String)
-
-            val user = mutableListOf(User("Long"))
-
-            val r = user.toMutableList()
-            r[0].name = "ÔPP"
-            println(user[0].name)
             sendBroadcast(intent)
         }
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -61,8 +54,8 @@ class MainActivity : AppCompatActivity() {
             insets
         }
     }
-    fun changeName(users: MutableList<User>) {
-        users.add(User("Lương"))
+    fun changeTaoName(users: MutableList<User>) {
+        users.add(User("huhu"))
     }
 }
 
